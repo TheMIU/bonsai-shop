@@ -1,10 +1,10 @@
 import './App.css';
-import Test from './Test';
+import DefaultLayout from './view/common/DefaultLayout';
 
 function App() {
   return (
     <div className="App">
-      <Test/>
+      <DefaultLayout/>
     </div>
   );
 }
