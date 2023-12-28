@@ -1,6 +1,9 @@
-* {
+.custom-font {
     font-family: 'Lora', serif;
-    font-family: 'Sorts Mill Goudy', serif;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
 }
 
 .button-1 {

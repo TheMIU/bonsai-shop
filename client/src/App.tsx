@@ -1,11 +1,16 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import DefaultLayout from './view/common/DefaultLayout';
+import Login from './view/pages/Login';
 
 function App() {
   return (
-    <div className="App">
-      <DefaultLayout/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/*' Component={DefaultLayout}></Route>
+        <Route path='/login' Component={Login}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

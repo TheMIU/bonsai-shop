@@ -3,7 +3,9 @@ import React, { Component } from 'react'
 export default class Footer extends Component {
   render() {
     return (
-      <div>Footer</div>
+      <div>
+        <h6 className='text-[11px] text-white'>Kasun Miuranga © 2023</h6>
+      </div>
     )
   }
 }
