@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import logo from '../../../src/images/logo.png'
 import { Link } from 'react-router-dom'
-import Login from '../pages/Login'
 
 export default class Navbar extends Component {
   render() {
@@ -16,12 +15,12 @@ export default class Navbar extends Component {
         </div>
 
         <div className='h-[100%] flex items-center justify-end me-3'>
-         
-            <button className='button-1 bg-green-600 text-slate-900
-           hover:bg-green-700 hover:text-white'> <Link to="/login"> Login </Link></button>
-          
-          <button className='button-1 bg-green-600 text-slate-900
-           hover:bg-green-700 hover:text-white'>Sign up</button>
+
+          <button className='button-1 bg-orange-500 text-white
+           hover:bg-orange-400 hover:text-white'> <Link to="/shopping-cart"><i className="fas fa-shopping-cart"></i></Link></button>
+
+          <button className='button-1 bg-green-500 text-white
+           hover:bg-green-400 hover:text-white'> <Link to="/login"> Login </Link></button>
         </div>
       </div>
     )

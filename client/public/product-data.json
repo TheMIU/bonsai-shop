@@ -1,0 +1,93 @@
+[
+    {
+        "id": 1,
+        "name": "Azalea - Pink Blossom",
+        "currency": "$",
+        "price": 50,
+        "image": "Azalea - Pink Blossom.png"
+    },
+    {
+        "id": 2,
+        "name": "Boxwood",
+        "currency": "$",
+        "price": 25,
+        "image": "boxwood.png"
+    },
+    {
+        "id": 3,
+        "name": "Chinese Elm",
+        "currency": "$",
+        "price": 29,
+        "image": "Chinese Elm.png"
+    },
+    {
+        "id": 5,
+        "name": "Colored marbles",
+        "currency": "$",
+        "price": 50,
+        "image": "Colored marbles.png"
+    },
+    {
+        "id": 6,
+        "name": "Polished River Rocks",
+        "currency": "$",
+        "price": 45,
+        "image": "Polished River Rocks.png"
+    },
+    {
+        "id": 7,
+        "name": "Golden Gate Ficus",
+        "currency": "$",
+        "price": 38,
+        "image": "Golden Gate Ficus.png"
+    },
+    {
+        "id": 8,
+        "name": "Large Rock Juniper",
+        "currency": "$",
+        "price": 46,
+        "image": "Large Rock Juniper.png"
+    },
+    {
+        "id": 9,
+        "name": "Miniature Chinese Elm",
+        "currency": "$",
+        "price": 29,
+        "image": "Miniature Chinese Elm.png"
+    },
+    {
+        "id": 10,
+        "name": "Pomegranate Bonsai",
+        "currency": "$",
+        "price": 70,
+        "image": "Pomegranate Bonsai.png"
+    },
+    {
+        "id": 11,
+        "name": "Banana",
+        "currency": "$",
+        "price": 12,
+        "image": "Rock Juniper.png"
+    },
+    {
+        "id": 12,
+        "name": "Sago Palm",
+        "currency": "$",
+        "price": 60,
+        "image": "Sago Palm.png"
+    },
+    {
+        "id": 13,
+        "name": "Taiwan Ficus",
+        "currency": "$",
+        "price": 29,
+        "image": "Taiwan Ficus.png"
+    },
+    {
+        "id": 14,
+        "name": "Tea Bonsai tree",
+        "currency": "$",
+        "price": 39,
+        "image": "Tea Bonsai tree.png"
+    }
+]

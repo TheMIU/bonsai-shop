@@ -20,3 +20,16 @@
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
+
+.button-2 {
+    padding: 4px;
+    height: 100%;
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
