@@ -13,7 +13,6 @@ export default class Products extends Component<{}, productState> {
     }
   }
 
-  /* react life cycle method ekak */
   componentDidMount(): void {
     this.fetchData().then(r => console.log("fetch data done" + r));
   }
@@ -33,13 +32,13 @@ export default class Products extends Component<{}, productState> {
     const { data } = this.state;
 
     return (
-      <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center items-center p-5'>
+      <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center items-center 
+      p-5 bg-[#000000cc]'>
         {
           data.map((product: any) => (
             <Product key={product.id} data={product} />
           ))
         }
-
       </div>
     )
   }

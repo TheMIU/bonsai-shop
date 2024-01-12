@@ -1,13 +1,19 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import bonsaiBackground from '../../images/bonsai-background.png';
 
 export default class Login extends Component {
   render() {
     return (
-      <div className="min-h-screen flex items-center justify-center  bg-[#004761] py-12 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen flex items-center justify-center  bg-[#0c0c0cc9] py-12 px-4 sm:px-6 lg:px-8">
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-cover bg-center z-[-1]"
+          style={{ backgroundImage: `url(${bonsaiBackground})` }}
+        />
+
         <div className="max-w-md w-full space-y-8">
           <div>
-            <h2 className="mt-6 text-center text-3xl text-white">
+            <h2 className="mt-6 text-center text-3xl text-white custom-font">
               Log in to your account
             </h2>
           </div>
@@ -28,6 +34,7 @@ export default class Login extends Component {
                   placeholder="Email address"
                 />
               </div>
+              <br />
               <div>
                 <label htmlFor="password" className="sr-only">
                   Password
@@ -67,7 +74,7 @@ export default class Login extends Component {
             <div>
               <button
                 type="submit"
-                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-500 hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 Log in
               </button>

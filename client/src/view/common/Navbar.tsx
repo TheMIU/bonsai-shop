@@ -16,11 +16,11 @@ export default class Navbar extends Component {
 
         <div className='h-[100%] flex items-center justify-end me-3'>
 
-          <button className='button-1 bg-orange-500 text-white
-           hover:bg-orange-400 hover:text-white'> <Link to="/shopping-cart"><i className="fas fa-shopping-cart"></i></Link></button>
+          <button className='button-1 bg-orange-600 text-white
+           hover:bg-orange-700 hover:text-white'> <Link to="/shopping-cart"><i className="fas fa-shopping-cart"></i></Link></button>
 
-          <button className='button-1 bg-green-500 text-white
-           hover:bg-green-400 hover:text-white'> <Link to="/login"> Login </Link></button>
+          <button className='button-1 bg-green-600 text-white
+           hover:bg-green-700 hover:text-white'> <Link to="/login"> Login </Link></button>
         </div>
       </div>
     )

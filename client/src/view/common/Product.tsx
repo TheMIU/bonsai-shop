@@ -42,7 +42,7 @@ export default class product extends Component<ProductProps, ProductState> {
                             this.state.isActive ?
                                 <ModifyCart data={{ product: data, isAdded: this.state.isActive }} />
                                 :
-                                <button className="button-2 bg-green-600 hover:bg-green-500 text-white" onClick={this.addToCartOnClick}>
+                                <button className="button-2 bg-green-600 hover:bg-green-700 text-white" onClick={this.addToCartOnClick}>
                                     Add <i className="fas fa-shopping-cart"></i></button>
                         }
                     </div>
