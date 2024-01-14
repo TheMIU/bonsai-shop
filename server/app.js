@@ -8,6 +8,9 @@ var logger = require('morgan');
 const dbConnection = require('./db/DBConnection');
 dbConnection();
 
+// cors
+const cors = require('cors');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 // product route
@@ -24,6 +27,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Enable CORS for all routs
+app.use(cors());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
