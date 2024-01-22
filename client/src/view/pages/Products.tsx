@@ -3,7 +3,7 @@ import axios from 'axios';
 import Product from '../common/Product';
 
 function Products() {
-  const [data, setData] = useState<any[]>([]);
+  const [data, setData] = useState<any[]>([]);    
 
   useEffect(() => {
     fetchData();
