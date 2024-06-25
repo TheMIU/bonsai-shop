@@ -3,10 +3,23 @@ import './App.css';
 import DefaultLayout from './view/common/DefaultLayout';
 import Login from './view/pages/Login';
 
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useState } from 'react';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    toast.success('Login successful');
+    setIsLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    toast.warn('Logout successful');
+    setIsLoggedIn(false);
+  };
+
   return (
     <BrowserRouter>
       <ToastContainer
@@ -21,10 +34,11 @@ function App() {
         pauseOnHover
         theme="dark"
       />
-      
+
       <Routes>
-        <Route path='/*' Component={DefaultLayout}></Route>
-        <Route path='/login' Component={Login}></Route>
+        {/* <Route path='/*' Component={DefaultLayout}></Route> */}
+        <Route path='/*' element={<DefaultLayout isLoggedIn={isLoggedIn} handleLogout={handleLogout} />} />
+        <Route path='/login' element={<Login handleLogin={handleLogin} />} />
       </Routes>
     </BrowserRouter>
   );

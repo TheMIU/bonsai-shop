@@ -1,22 +1,25 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import bonsaiBackground from '../../images/bonsai-background.png';
 import { toast } from 'react-toastify';
 
-export default function Login() {
+interface LoginProps {
+  handleLogin: () => void;
+}
+
+const Login: React.FC<LoginProps> = ({ handleLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (event: { preventDefault: () => void; }) => {
     event.preventDefault();
 
-    // Check if email and password match the expected values
     if (email === 'admin@example.com' && password === '1234') {
-      window.location.href = '/';
-      toast.success('Welcome');
+      handleLogin();
+      navigate('/');
     } else {
       toast.error('Login failed');
-      // clear form fields
       setEmail('');
       setPassword('');
     }
@@ -112,3 +115,6 @@ export default function Login() {
     </div>
   )
 }
+
+
+export default Login;

@@ -1,8 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import logo from '../../../src/images/logo.png'
 import { Link } from 'react-router-dom'
+interface NavbarProps {
+  isLoggedIn: boolean;
+  handleLogout: () => void;
+}
 
-function Navbar() {
+const Navbar: React.FC<NavbarProps> = ({ isLoggedIn, handleLogout }) => {
+
   return (
     <div className='h-[100%] flex justify-between'>
       <div className='h-[100%] flex items-center justify-start ml-3'>
@@ -18,8 +23,19 @@ function Navbar() {
         <button className='button-1 bg-orange-600 text-white
          hover:bg-orange-700 hover:text-white'> <Link to="/shopping-cart"><i className="fas fa-shopping-cart"></i></Link></button>
 
-        <button className='button-1 bg-green-600 text-white
-         hover:bg-green-700 hover:text-white'> <Link to="/login"> Login </Link></button>
+        {!isLoggedIn && (
+          <button className='button-1 bg-green-600 text-white hover:bg-green-700 hover:text-white'>
+            <Link to="/login">Login</Link>
+          </button>
+        )}
+
+        {isLoggedIn && (
+          <button className='button-1 bg-red-600 text-white hover:bg-red-700 hover:text-white' onClick={handleLogout}>
+            Logout
+          </button>
+        )}
+
+
       </div>
     </div>
   )

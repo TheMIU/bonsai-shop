@@ -4,11 +4,16 @@ import Navbar from './Navbar'
 import MainContent from './MainContent'
 import bonsaiBackground from '../../images/bonsai-background.png';
 
-function DefaultLayout() {
+interface DefaultLayoutProps {
+    isLoggedIn: boolean;
+    handleLogout: () => void;
+}
+  
+const DefaultLayout: React.FC<DefaultLayoutProps> = ({ isLoggedIn, handleLogout }) => {
     return (
         < div className='min-h-screen h-80  z-[10]'>
             <div className='bg-[#000000cc] h-[8%]'>
-                <Navbar />
+                <Navbar isLoggedIn={isLoggedIn} handleLogout={handleLogout} />
             </div>
 
             <div className='min-h-[87%]'>
