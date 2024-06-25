@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { CartItem } from '../../model/CartItem';
+import { toast } from 'react-toastify';
 
 interface ModifyCartProps {
     data: any
@@ -56,7 +57,7 @@ export default class ModifyCart extends Component<ModifyCartProps, ModifyCartSta
         const onDecreaseItemCount = () => {
             itemCount > 1 ?
                 this.setState({ itemCount: --itemCount }) :
-                alert('cant be less than 1');
+                toast.warn('cant be less than 1');
         }
 
         const onIncreaseItemCount = () => {
